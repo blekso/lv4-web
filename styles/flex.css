@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-right:5em;
+    padding-left:5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #4abdac;
+    color: #dfdce3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* maksimalni razmak izmedu elemenata */
+    align-items: center; /* vertikalno centriranje */
+    margin: 10px;
+    padding: 5px;
+    height: 90px;
+    background-color: #fc4a1a;
+    border-radius: 10px;
+    border-width: thin;
+}
+
+header h1 {
+    margin-left: 300px;
+    font-size: 2em;
+}
+
+header img {
+    width: 6em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    height: 70px;
+    background-color: #f78733;
+    border-radius: 10px;
+    border-width: thin;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* horizontalno centriranje */
+    align-items: center; /* vertikalno centriranje */
+    border-radius: 10px;
+    border-width: thin;;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav ul li { 
+    margin-right: 30px;
+    width: 120px;
+}
+
+nav ul li:last-child { /* zadnje dijete od roditelj elementa */
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+main{
+    display: flex; 
+    flex-direction: row; /* defaultni direction */
+    flex-wrap: wrap; /* omogucuje prelijevanje elemanata u drugi red zbog mobilnih uredaja */
+    margin: 10px;
+}
+main article, aside {
+    background-color: #f78733;
+}
+
+article:nth-of-type(1){ /* prvo dijete od roditelj elementa */
+    order: 1;  /* prvi u nizu elemenata u flexboxu */
+    flex: 1 100px; /* odredivanje width/height */
+    flex-basis: 60%;
+	margin-top: 0px;
+	margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: thin;
+	
+}
+aside:nth-of-type(1){
+    order: 2;
+    flex: 1 100px;
+    flex-basis: 35%; /* velicina */
+	width: 300px;
+	padding: 5px;
+    border-radius: 10px;
+    border-width: thin;
+}
+article:nth-of-type(2){ /* 2. dijete od roditelj elementa */
+    order: 3;
+    flex: 1 100px;
+    flex-basis: 60%;  /* velicina */
+	margin-top: 10px;
+	margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: thin;  
+}
+
+aside:nth-of-type(2){
+    order: 4;
+    flex: 4 100px;
+    flex-basis: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: thin;
+}
+
+footer {
+    background-color: #fc4a1a;
+    margin: 10px;
+    padding: 5px;
+    height: 90px;
+    border-radius: 10px;
+    border-width: thin;
+	display: flex;
+    flex-flow: row wrap; /* omogucuje wrap u novi red */
+    justify-content: space-between; /* maksimalni razmak izmedu elemenata */
+    flex-basis: 20%;
+}
+
+footer ul {
+    display: flex;
+	order: 2;
+	list-style-type: none;
+}
+
+footer ul li {
+    text-align: right;
+}
+
+
+footer p{
+	order: 1; /* prvi od pocetka flexboxa */
+	flex: 2 200px; /* velicina height/width */
+    width: 100%;
+    text-align: left;  
+}
